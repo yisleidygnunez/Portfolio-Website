@@ -56,6 +56,8 @@ body {
     }
 }
 
+
+
 /* 02 | SHARED BUTTONS */
 
 .btn-primary, .btn-secondary, .contact-btn {
@@ -71,3 +73,77 @@ body {
 .btn-secondary { border: 1px solid var(--accent); color: var(--text); }
 .btn-primary:hover { background-color: var(--accent); }
 .btn-secondary:hover { background-color: var(--surface); }
+
+
+
+/* 03 | INDEX.CSS — homepage, hero, featured projects */
+
+.port-hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    padding: 100px 10%;
+}
+.port-introduction { max-width: 600px; }
+.subtitle {
+    font-size: 14px;
+    color: var(--accent);
+    letter-spacing: 2px;
+}
+.port-introduction h1 {
+    font-size: 50px;
+    line-height: 1.2;
+    margin: 20px 0;
+}
+.port-introduction p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: var(--muted);
+}
+.headshot {
+    width: 300px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+.projects { padding: 60px 10%; }
+.projects h2 {
+    font-size: 16px;
+    letter-spacing: 2px;
+    color: var(--accent);
+    margin-bottom: 30px;
+}
+.project-container { display: flex; gap: 25px; }
+.project-card {
+    flex: 1;
+    background-color: var(--surface);
+    padding: 30px;
+    border-radius: 8px;
+}
+.project-card h3 { font-size: 24px; margin-bottom: 10px; }
+.project-card p { color: var(--card-text); font-size: 15px; }
+/* Mobile layout */
+@media (max-width: 768px) {
+    .port-hero {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        padding: 50px 6%;
+        gap: 30px;
+    }
+    .port-introduction h1 { font-size: 36px; }
+    .headshot {
+        width: 250px;
+        height: 250px;
+        max-width: 100%;
+    }
+    .projects { padding: 40px 6%; }
+    .project-container { flex-direction: column; }
+    .hero-buttons { flex-wrap: wrap; }
+}
