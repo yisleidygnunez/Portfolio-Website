@@ -1,0 +1,73 @@
+/* 01 | GLOBAL CSS — theme, base, navigation */
+
+:root {
+    --bg: rgb(32, 37, 23);
+    --text: cornsilk;
+    --border: #4D5845;
+    --accent: #B7CBA7;
+    --muted: #D7DCCA;
+    --button: #D8E2C5;
+    --button-text: #202719;
+    --surface: #303A29;
+    --card-text: #C7D0BD;
+    --resume-text: #f9f4da;
+    --resume-accent: #b8cda2;
+    --download: #d4e1bf;
+    --download-text: #1e2517;
+    --sidebar: #293424;
+    --tag: #3b4a34;
+    --timeline: #a6bd91;
+}
+html { scroll-behavior: smooth; }
+body {
+    margin: 0;
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+}
+* { box-sizing: border-box; }
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 8%;
+    border-bottom: 1px solid var(--border);
+}
+.logo {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 24px;
+    color: var(--text);
+}
+.nav-links { display: flex; gap: 30px; }
+.nav-links a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 16px;
+}
+.nav-links a:hover, .nav-links a.active { color: var(--accent); }
+/* Mobile layout */
+@media (max-width: 768px) {
+    .navbar { flex-direction: column; gap: 15px; }
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+}
+
+/* 02 | SHARED BUTTONS */
+
+.btn-primary, .btn-secondary, .contact-btn {
+    padding: 14px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.btn-primary {
+    background-color: var(--button);
+    color: var(--button-text);
+    font-weight: bold;
+}
+.btn-secondary { border: 1px solid var(--accent); color: var(--text); }
+.btn-primary:hover { background-color: var(--accent); }
+.btn-secondary:hover { background-color: var(--surface); }
